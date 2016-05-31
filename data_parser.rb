@@ -22,7 +22,7 @@ attr_reader :users, :path, :items, :data
     end
 
     @data["items"].each do |x|
-      @items.push (Item.new x["id"],x["name"],x["category"], x["price"]   )
+      @items.push (Item.new x.values[0],x.values[1],x.values[2], x.values[3] )
     end
 
   end
